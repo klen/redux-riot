@@ -1,0 +1,29 @@
+{
+  "name": "redux-riot",
+  "version": "0.0.0",
+  "description": "Redux support for your Riot application",
+  "main": "lib/redux-riot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klen/redux-riot.git"
+  },
+  "keywords": [
+    "riot",
+    "redux"
+  ],
+  "author": "Kirill Klenov <horneds@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klen/redux-riot/issues"
+  },
+  "homepage": "https://github.com/klen/redux-riot#readme",
+  "dependencies": {
+    "redux": "^3.7.2"
+  },
+  "devDependencies": {
+    "coffeescript": "^1.12.7"
+  }
+}
