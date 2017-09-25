@@ -1,6 +1,6 @@
 {
   "name": "redux-riot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Redux support for your Riot application",
   "main": "lib/redux-riot.js",
   "babel": {
