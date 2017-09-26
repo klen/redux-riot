@@ -28,7 +28,9 @@ module.exports = (store) ->
         previous = NONE
 
         selector ?= DEFAULT_SELECTOR
-        callback ?= (state) -> tag.update(state: state)
+        callback ?= (state) ->
+            tag.state = state
+            tag.update()
         changes  ?= selector.recomputations or DEFAULT_SELECTOR
 
         compute = ->
@@ -36,10 +38,10 @@ module.exports = (store) ->
             selected = selector(state)
 
             version = changes(selected)
+            changed = version != previous
+            previous = version
 
-            callback(selected) unless version == previous
-
-            return previous = version
+            callback(selected) if changed
 
         compute()
 
