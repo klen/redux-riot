@@ -1,6 +1,7 @@
 # redux-riot
 
 [![npm version](https://badge.fury.io/js/redux-riot.svg)](https://badge.fury.io/js/redux-riot)
+[![travis build](https://travis-ci.org/klen/redux-riot.svg?branch=develop)](https://travis-ci.org/klen/redux-riot)
 
 A Riot integration to Redux
 
@@ -36,7 +37,21 @@ Riot.mixin('redux', RiotReduxMixin(store)) // or shared
 
 ```js
 
-    this.mixin('redux') // skip if the mixin is installed globally
+    // Initialize the mixin
+    // (skip this if the mixin is installed globally)
+    this.mixin('redux')
+
+    // Subscribe to state changes (reselect is supported)
+    this.subscribe( (state) => state.some )
+    this.subscribe( require('./selector'))
+    this.subscribe( require('./selector'), callback )
+
+    // Bind actions to this.actions
+    this.actions( require('./actions') )
+
+    // Use binded actions
+    this.actions.select('payload')
+
 ```
 
 ## License
